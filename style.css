@@ -157,6 +157,10 @@ content>.caption>p {
     opacity: 0.7;
 }
 
+.icon_ img#git {
+    filter: brightness(10);
+}
+
 .btn-1 {
     background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
 }
