@@ -32,7 +32,8 @@ p {
 /*header*/
 
 header {
-    background-color: #0b615e;
+    background-color: #000000;
+    background-image: url(img/large_background.jpg);
     color: white;
 }
 
