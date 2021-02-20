@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="slide.css">
+    <title>Huỳnh Bá Vinh - Official website</title>
+</head>
+
+<body>
+    <!--menu-->
+    <header>
+        <menu class="can_giua">
+            <h1 id="ten_rieng">
+                <a href="about.html"> Vinh </a>
+            </h1>
+            <ul>
+                <li>
+                    <a href="#ve_toi"> Về tôi </a>
+                </li>
+                <li>
+                    <a href="#work"> Tôi làm gì? </a>
+                </li>
+                <li>
+                    <a href="https://github.com/huynhbavinh"> GitHub </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/hb.vinh/"> Instagram </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/toilabavinh/"> Facebook </a>
+                </li>
+                <li>
+                    <a href="#thong_tin_lien_lac"> Liên hệ tôi</a>
+                </li>
+            </ul>
+        </menu>
+        <content class="can_giua">
+            <div id="avatar">
+                <img src="img/me.jpg" alt="this is me" />
+            </div>
+
+            <div class="caption">
+                <h1>Huỳnh Bá Vinh</h1>
+                <h3>Web Developer</h3>
+                <p>
+                    Xin chào! Tôi là Vinh, tôi làm thiết kế web và sáng tạo nội dung. Nếu bạn cần tôi, hãy kết nối!
+                </p>
+                <div id="lien_he">
+                    <div class="button btn-1">
+                        <a style="color: white; font-weight: 500;" href="#thong_tin_lien_lac">
+                           Liên hệ tôi ngay!
+                       </a>
+                    </div>
+                    <div class="icon_">
+                        <a href="https://www.facebook.com/toilabavinh/">
+                            <img src="img/facebook.png" alt="this is my facebook">
+                        </a>
+                    </div>
+                    <div class="icon_">
+                        <a href="https://github.com/huynhbavinh">
+                            <img src="img/github.png" alt="this is my GitHub">
+                        </a>
+                    </div>
+                </div>
+        </content>
+    </header>
+
+    <!--Slide show-->
+
+    <div class="can_giua">
+        <h2 id="ve_toi" style="text-align: center;padding: 50px 0px;">Nói về tôi</h2>
+        <div class="main_content">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 4</div>
+                    <div class="text">
+                        <p>
+                            Sơ bộ về thông tin cá nhân: <br> Sinh nhật: 11/07/2000 <br> Cung: cự giải <br>Sinh viên năm 3 tại trường Đại Học Văn Lang<br> Ngành: Kỹ thuật phần mềm
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 4</div>
+                    <div class="text">
+                        <p>
+                            Hâm mộ các công ty phần mềm lớn: Google, Facebook, VNG, ...<br> Yêu thích sự phát triển về khoa học- kỹ thuật của thế giới hiện đại, và muốn đóng góp 1 phần vào sự phát triển đó
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 4</div>
+                    <div class="text">
+                        <p>
+                            People don't buy your thinking <br> People buy your solution!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">4 / 4</div>
+                    <div class="text">
+                        <p>
+                            Là người yêu thích sự sáng tạo và đề cao sự tự do, thích khám phá học hỏi, quan tâm hòa đồng với mọi người xung quanh, sẵn sàng giao lưu và kết bạn
+                        </p>
+                    </div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+    <!--communication-->
+    <div class="gray_background">
+        <div class="can_giua">
+            <h2 id="ve_toi" style="text-align: center;padding: 50px 0px;">Hãy giao lưu với tôi</h2>
+            <div class="mang_xa_hoi">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/toilabavinh/">Tôi trên Facebook</a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/hb.vinh/">Tôi trên Instagram</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/huynhbavinh">Tôi trên GitHub</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!--work-->
+    <div>
+        <div class="can_giua">
+            <div id="work" class="container_content">
+                <div>
+                    <h2 id="" style="padding: 50px 0px; font-size: 36px;">Lập trình phần mềm</h2>
+                    <p>
+                        Tôi và team của tôi thiết kế, lập trình website (ứng dụng di động) theo yêu cầu của khách hàng. Hoàn toàn hand code nên phù hợp với các website có tính năng chuyên biệt, đặc thù.
+                    </p>
+                    <a class="hot_line" href="img/CV.png">Xem Thêm</a>
+                </div>
+                <div>
+                    <img class="crop_img_content" src="img/software.png" alt="" srcset="">
+                </div>
+            </div>
+
+            <div class="container_content xole">
+                <div>
+                    <img class="crop_img_content" src="img/vanlang.png" alt="" srcset="">
+                </div>
+                <div>
+                    <h2 id="" style="padding: 50px 0px; font-size: 36px;">Sinh Viên</h2>
+                    <p>
+                        Tôi hiện tại là Sinh viên năm 3 của trường đại học Văn Lang khóa K24,<br> Chuyên ngành: Kỹ thuật phần mềm
+                    </p>
+                </div>
+            </div>
+
+            <div class="container_content">
+                <div>
+                    <h2 id="" style="padding: 50px 0px; font-size: 36px;">Viết blog về cuộc sống xung quanh</h2>
+                    <p>
+                        Viết về cuộc sống xung quanh tôi, những câu từ hay từ quyển sách tôi đang đọc, từ những khung cảnh đẹp đã lọt vào khẽ mắt
+                    </p>
+                </div>
+                <div>
+                    <img class="crop_img_content" src="img/writter.jpg" alt="" srcset="">
+                </div>
+            </div>
+
+            <div class="container_content xole">
+                <div>
+                    <img class="crop_img_content" src="img/my_life.jpg" alt="" srcset="">
+                </div>
+                <div>
+                    <h2 id="" style="padding: 50px 0px; font-size: 36px;">Làm những gì tôi yêu thích</h2>
+                    <p>
+                        Sống cuộc sống đầy niềm vui, và hãy làm những điều mình thích :3
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!--img about me-->
+    <div style="background-color: #0b615e;">
+        <div class="can_giua">
+            <h2 id="" style="text-align: center;padding: 50px 0px 50px 0px; color: white;">Hình ảnh
+                <br>xem thêm ảnh tôi trên Facebook
+                <a class="hot_line" href="https://www.facebook.com/toilabavinh/">Tại Đây</a>
+            </h2>
+
+            <div class="container_img">
+                <div>
+                    <img class="crop_img_small" src="img/life1.jpg" alt="" srcset="">
+                </div>
+                <div>
+                    <img class="crop_img_small" src="img/life2.jpg" alt="" srcset="">
+                </div>
+                <div>
+                    <img class="crop_img_small" src="img/life3.jpg" alt="" srcset="">
+                </div>
+                <div>
+                    <img class="crop_img_small" src="img/life4.jpg" alt="" srcset="">
+                </div>
+                <div>
+                    <img class="crop_img_small" src="img/life5.jpg" alt="" srcset="">
+                </div>
+                <div>
+                    <img class="crop_img_small" src="img/life6.jpg" alt="" srcset="">
+                </div>
+                <div>
+                    <img class="crop_img_small" src="img/life7.jpg" alt="" srcset="">
+                </div>
+                <div>
+                    <img class="crop_img_small" src="img/life8.jpg" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Liên hệ tôi tại-->
+    <div>
+        <div class="can_giua">
+            <h2 id="thong_tin_lien_lac" style="text-align: center; padding: 50px 0px; font-size: 28px;"> Liên hệ tôi tại </h2>
+            <ul class="thong_tin_lien_lac">
+                <li>
+                    <div class="icon_">
+                        <img src="img/gmail-logo.png" alt="this is my gmail">
+                        <p>me.huynhbavinh@gmail.com</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon_">
+                        <img src="img/apple.png" alt="this is my phone">
+                        <p>098283xxxx</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon_">
+                        <img src="img/facebook_black.png" alt="this is my Facebook">
+                        <a href="http://facebook.com/toilabavinh">fb.com/toilabavinh</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon_">
+                        <img src="img/github.png" alt="this is my github">
+                        <a href="http://facebook.com/toilabavinh">github.com/huynhbavinh</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--footer-->
+    <div class="footer">
+        <p>&#169 toàn bộ nội dung và bản quyền thuộc về quyền sở hữu của tôi</p>
+    </div>
+
+</body>
+
+</html>
